@@ -18,6 +18,7 @@ function load(data) {
         <div class="card-body">
         <h5 class="card-title ml-0">${elem.title}</h5>
         <p class="card-text">${elem.content.split('</p>')[0].replace('<p>', "").replace('</p>', "").replace('<strong>', "").replace('</strong>', "").replace('<h4>', "").replace('</h4>', "").replace('<strong>', "").replace('</strong>', "").replace('<strong>', "").replace('</strong>', "")}</p>
+        <p class="Datum">Datum: ${elem.publicationDate}</p>
         <a href="${elem.linkTo}" target="_blank" class="btn btn-outline-primary btn-sm" style='float:left'>Lees meer</a>
         <i class="fa fa-heart fa-lg" aria-hidden="true" onclick="like('${elem.UUID}')"></i> ${elem.likes}
         </div>
