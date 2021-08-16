@@ -45,3 +45,12 @@ function search() {
             load(filtered);
         });
 }
+
+function sort() {
+    axios.get('https://thecrew.cc/news/read.php')
+        .then(function (response) {
+            let data = response.data.news;
+            data = data.sort((a, b) => b.likes - a.likes);
+            load(data);
+        })
+}
