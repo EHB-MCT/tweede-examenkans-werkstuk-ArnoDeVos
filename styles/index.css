@@ -26,3 +26,9 @@ img {
   border: 1px solid rgb(190, 190, 190);
   border-radius: 5px;
 }
+
+i {
+  color: red;
+  margin-left: 40%;
+  height: 20px;
+}
