@@ -34,3 +34,14 @@ function like(id) {
             getData();
         });
 }
+
+function search() {
+    let txt = document.getElementById('txt').value;
+    txt = txt.toLowerCase().toString();
+    axios.get('https://thecrew.cc/news/read.php')
+        .then(function (response) {
+            let data = response.data.news;
+            let filtered = data.filter(x => x.title.toLowerCase().includes(txt) || x.content.toLowerCase().includes(txt));
+            load(filtered);
+        });
+}

@@ -11,8 +11,16 @@
 
 <body>
 	
-<div id="html" style="margin-left: 5%;margin-top: 10px;"></div>
-			
+  <body>
+    <div id="container">
+      <div class="row">
+        <div class="col">
+          <input class="form form-control" id="txt" placeholder="Zoek hier ..." oninput="search()" 
+          style="width: 100%" />
+          <div id="html" style="margin-left: 5%;margin-top: 10px;"></div>
+        </div>
+      </div>
+    </div>			
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
